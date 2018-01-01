@@ -49,7 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeDetails.cs">
+      <DependentUpon>SureSafetyDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentDetails.cs">
+      <DependentUpon>SureSafetyDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SureSafetyDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SureSafetyDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SureSafetyDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SureSafetyDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SureSafetyDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,6 +84,22 @@
     <None Include="SureSafetyDBModel.edmx.diagram">
       <DependentUpon>SureSafetyDBModel.edmx</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SureSafetyDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SureSafetyDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>SureSafetyDBModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="SureSafetyDBModel.edmx.sql" />
+    <Content Include="SureSafetyDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SureSafetyDBModel.cs</LastGenOutput>
+      <DependentUpon>SureSafetyDBModel.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

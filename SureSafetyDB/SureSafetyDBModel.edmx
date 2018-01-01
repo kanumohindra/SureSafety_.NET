@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="SureSafetyDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="SureSafetyDBModelTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="SureSafetyDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="SureSafetyDBModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EmployeeDetails" EntityType="SureSafetyDBModel.EmployeeDetails" />
+          <EntitySet Name="IncidentDetails" EntityType="SureSafetyDBModel.IncidentDetails" />
+          <AssociationSet Name="EmployeeDetailsIncidentDetails" Association="SureSafetyDBModel.EmployeeDetailsIncidentDetails">
+            <End Role="EmployeeDetails" EntitySet="EmployeeDetails" />
+            <End Role="IncidentDetails" EntitySet="IncidentDetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="EmployeeDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" />
+          <Property Name="EmployeeID" Type="String" Nullable="false" />
+          <Property Name="Supervisor" Type="String" Nullable="false" />
+          <NavigationProperty Name="IncidentDetails" Relationship="SureSafetyDBModel.EmployeeDetailsIncidentDetails" FromRole="EmployeeDetails" ToRole="IncidentDetails" />
+        </EntityType>
+        <EntityType Name="IncidentDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SuddenEvent" Type="Boolean" Nullable="false" />
+          <Property Name="SEDate" Type="String" Nullable="true" />
+          <Property Name="SETime" Type="String" Nullable="true" />
+          <Property Name="GradualOT" Type="Boolean" Nullable="false" />
+          <Property Name="GDate" Type="String" Nullable="true" />
+          <Property Name="GTime" Type="String" Nullable="true" />
+          <Property Name="ReportedDate" Type="String" Nullable="false" />
+          <Property Name="ReportedTime" Type="String" Nullable="false" />
+          <Property Name="ReprotedTo" Type="String" Nullable="false" />
+          <Property Name="LocationOfIncident" Type="String" Nullable="false" />
+          <Property Name="Exposures" Type="String" Nullable="false" />
+          <Property Name="IncidentDescription" Type="String" Nullable="false" />
+          <Property Name="WhatHappened" Type="String" Nullable="false" />
+          <Property Name="InjuryDescription" Type="String" Nullable="false" />
+          <Property Name="ToolsUsed" Type="String" Nullable="false" />
+          <Property Name="PersonalProtectiveEquipment" Type="String" Nullable="false" />
+          <Property Name="Witness" Type="String" Nullable="false" />
+          <Property Name="FirstAidRequired" Type="Boolean" Nullable="false" />
+          <Property Name="FirstAidDate" Type="String" Nullable="true" />
+          <Property Name="FirstAiderName" Type="String" Nullable="false" />
+          <Property Name="FirstAiderPosition" Type="String" Nullable="false" />
+          <Property Name="AbsenceDueToIncident" Type="Boolean" Nullable="false" />
+          <Property Name="FirstDayOff" Type="String" Nullable="true" />
+          <Property Name="MedicalTreatmentRequired" Type="Boolean" Nullable="true" />
+          <Property Name="MTDate" Type="DateTime" Nullable="true" />
+          <Property Name="FacilityType" Type="String" Nullable="false" />
+          <Property Name="FacilityName_Address" Type="String" Nullable="false" />
+          <Property Name="Practitioner" Type="String" Nullable="false" />
+          <NavigationProperty Name="EmployeeDetails" Relationship="SureSafetyDBModel.EmployeeDetailsIncidentDetails" FromRole="IncidentDetails" ToRole="EmployeeDetails" />
+        </EntityType>
+        <Association Name="EmployeeDetailsIncidentDetails">
+          <End Type="SureSafetyDBModel.EmployeeDetails" Role="EmployeeDetails" Multiplicity="*" />
+          <End Type="SureSafetyDBModel.IncidentDetails" Role="IncidentDetails" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="SureSafetyDBModel" />
+        <Alias Key="Target" Value="SureSafetyDBModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="SureSafetyDBModelContainer" StorageEntityContainer="SureSafetyDBModelTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

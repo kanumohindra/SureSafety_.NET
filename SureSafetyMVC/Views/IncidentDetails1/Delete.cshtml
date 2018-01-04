@@ -1,0 +1,248 @@
+﻿@model SureSafetyDB.IncidentDetails
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>IncidentDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SuddenEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuddenEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SETime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SETime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GradualOT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GradualOT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReprotedTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReprotedTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationOfIncident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationOfIncident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exposures)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exposures)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IncidentDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncidentDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhatHappened)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhatHappened)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InjuryDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InjuryDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToolsUsed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToolsUsed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonalProtectiveEquipment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonalProtectiveEquipment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Witness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Witness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstAidRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstAidRequired)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstAidDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstAidDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstAiderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstAiderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstAiderPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstAiderPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AbsenceDueToIncident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AbsenceDueToIncident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstDayOff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstDayOff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalTreatmentRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalTreatmentRequired)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MTDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MTDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FacilityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FacilityType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FacilityName_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FacilityName_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Practitioner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Practitioner)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

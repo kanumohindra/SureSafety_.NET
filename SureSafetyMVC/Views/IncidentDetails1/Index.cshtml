@@ -1,0 +1,195 @@
+﻿@model IEnumerable<SureSafetyDB.IncidentDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SuddenEvent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SETime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradualOT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReportedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReportedTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReprotedTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationOfIncident)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exposures)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncidentDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WhatHappened)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InjuryDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolsUsed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonalProtectiveEquipment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Witness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstAidRequired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstAidDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstAiderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstAiderPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbsenceDueToIncident)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstDayOff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicalTreatmentRequired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MTDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FacilityType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FacilityName_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Practitioner)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuddenEvent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SETime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradualOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportedTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReprotedTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationOfIncident)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exposures)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncidentDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhatHappened)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InjuryDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToolsUsed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonalProtectiveEquipment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Witness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstAidRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstAidDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstAiderName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstAiderPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbsenceDueToIncident)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstDayOff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicalTreatmentRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MTDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacilityType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacilityName_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Practitioner)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

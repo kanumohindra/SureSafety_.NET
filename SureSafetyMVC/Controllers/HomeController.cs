@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 namespace SureSafetyMVC.Controllers
 {
     public class HomeController : Controller
@@ -12,7 +11,7 @@ namespace SureSafetyMVC.Controllers
         {
             return View();
         }
-
+       
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

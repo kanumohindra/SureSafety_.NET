@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7c4e4f837e3745c3b8a8dc8b449b8415" Name="Diagram1" >
+      <Diagram DiagramId="7c4e4f837e3745c3b8a8dc8b449b8415" Name="Diagram1" ZoomLevel="74" >
         <EntityTypeShape EntityType="SureSafetyDBModel.EmployeeDetails" Width="1.875" PointX="2" PointY="3" />
         <EntityTypeShape EntityType="SureSafetyDBModel.IncidentDetails" Width="3.125" PointX="5.75" PointY="3" />
         <AssociationConnector Association="SureSafetyDBModel.EmployeeDetailsIncidentDetails" />
